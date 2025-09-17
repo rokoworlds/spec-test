@@ -1,0 +1,18 @@
+@use '../styles/helpers/index' as *;
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+html {
+    background-color: var(--color-gray-20);
+    font-family: var(--font-family-base), sans-serif;
+    color: var(--color-black);
+
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}

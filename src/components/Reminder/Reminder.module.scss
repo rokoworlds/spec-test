@@ -1,0 +1,18 @@
+@use '../../styles/helpers/index' as *;
+
+
+.link {
+    @include fluid-text(20, 14);
+    font-weight: 400;
+    color: var(--color-black);
+    text-decoration: underline;
+}
+
+.container {
+    width: rem(157);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(3.5);
+    padding: rem(16);
+}

@@ -1,0 +1,48 @@
+@use '../../styles/helpers/index' as *;
+
+.container {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background: url('../../assets/images/scene1.png') center / cover no-repeat;
+
+    @include mobile {
+        max-height: 40vh;
+    }
+
+}
+
+.back {
+    max-width: 100%;
+}
+
+.decor {
+    max-width: 100%;
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    z-index: 9;
+
+    @include mobile {
+        left: 0;
+    }
+}
+
+.main {
+    max-width: 70%;
+    position: absolute;
+    right: rem(150);
+    top: rem(50);
+    z-index: 7;
+
+    @include laptop {
+        right: rem(100);
+        top: rem(10);
+    }
+
+    @include mobile {
+        max-width: 55%;
+        right: rem(90);
+        top: 0;
+    }
+}

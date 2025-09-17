@@ -1,0 +1,25 @@
+@use '../../styles/helpers/index' as *;
+
+.button {
+  /* Layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(24);
+  padding: rem(22) rem(26);
+
+  /* Typography */
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  @include fluid-text(20, 14);
+
+  /* Colors */
+  background-color: var(--color-black);
+  color: var(--color-white);
+
+  /* Responsive */
+  @include laptop {
+    padding: rem(15) rem(17);
+    gap: rem(17);
+  }
+}

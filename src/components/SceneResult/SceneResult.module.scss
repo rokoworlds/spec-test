@@ -1,0 +1,100 @@
+@use '../../styles/helpers/index' as *;
+
+.container {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background: url('../../assets/images/scene-result.png') center / cover no-repeat;
+
+    @include mobile {
+        max-height: 40vh;
+    }
+
+}
+
+.main {
+    position: absolute;
+    bottom: -15px;
+    left: 5%;
+    max-width: 100%;
+    z-index: 9;
+
+    @include laptop {
+        max-width: 80%;
+    }
+
+    @include mobile {
+        max-width: 50%;
+        left: 30%;
+    }
+}
+
+.msg {
+    position: absolute;
+    max-width: 50%;
+    bottom: 18%;
+    left: 49%;
+    z-index: 10;
+
+    @include laptop {
+        width: 40%;
+        bottom: 18%;
+        left: 49%;
+    }
+
+    @include mobile {
+        width: 30%;
+        bottom: 25%;
+        left: 10%;
+    }
+}
+
+.cheecks {
+    width: 45%;
+    position: absolute;
+    bottom: 52%;
+    left: 20%;
+    rotate: -15deg;
+    z-index: 15;
+
+    @include laptop {
+        width: 40%;
+        bottom: 47%;
+        left: 20%;
+    }
+
+    @include mobile {
+        width: 20%;
+        bottom: 40%;
+        left: 41%;
+    }
+}
+
+.angry {
+    width: 10%;
+    position: absolute;
+    bottom: 70%;
+    left: 20%;
+    z-index: 15;
+
+    @include mobile {
+        width: 5%;
+        bottom: 60%;
+        left: 45%;
+    }
+}
+
+.angry2 {
+    width: 15%;
+    position: absolute;
+    bottom: 70%;
+    left: 50%;
+    z-index: 15;
+    rotate: -15deg;
+
+        @include mobile {
+        width: 10%;
+        bottom: 60%;
+        left: 60%;
+    }
+}

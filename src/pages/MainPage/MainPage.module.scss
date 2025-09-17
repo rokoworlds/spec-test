@@ -1,0 +1,22 @@
+@use '../../styles/helpers/index' as *;
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile {
+        position: relative;
+        top: -20px;
+        z-index: 100;
+    }
+}

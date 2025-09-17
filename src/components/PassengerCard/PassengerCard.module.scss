@@ -1,0 +1,28 @@
+@use '../../styles/helpers/index' as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(24);
+
+
+    @include laptop {
+      margin-bottom: rem(18);
+    }
+
+    @include mobile {
+      margin-bottom: rem(16);
+    }
+}
+
+.actions {
+    margin-top: rem(32);
+
+    @include laptop {
+      margin-top: rem(24);
+    }
+
+    @include mobile {
+      margin-top: rem(20);
+    }
+}

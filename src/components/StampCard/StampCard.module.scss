@@ -1,0 +1,68 @@
+@use '../../styles/helpers/index' as *;
+
+.stamp-container {
+    --card-color: var(--color-light);
+
+    @include mobile {
+      width: 100vw;
+    }
+}
+
+// BG COLORS
+
+.light {
+  --card-color: var(--color-light);
+}
+
+.green {
+  --card-color: var(--color-green);
+}
+
+.red {
+  --card-color: var(--color-red);
+}
+
+// BORDER POSITION
+
+.top {
+  padding-top: rem(8);
+}
+
+.block {
+  padding-block: rem(8);
+}
+
+.stamp-border {
+  // z-index: 100;
+  --radius: 8px;
+  background-image: 
+    radial-gradient(
+      var(--radius),
+      transparent 98%,
+      var(--card-color)
+    ),
+    linear-gradient(var(--card-color) 0 0);
+  background-repeat: 
+    round, 
+    no-repeat;
+  background-position:
+    calc(var(--radius) * -1.5) calc(var(--radius) * -1.5),
+    50%;
+  background-size:
+    calc(var(--radius) * 3) calc(var(--radius) * 3),
+    calc(100% - var(--radius) * 3) calc(100% - var(--radius) * 3);
+}
+
+.container {
+    background-color: var(--card-color);
+    padding: rem(48);
+    
+
+    @include laptop {
+      padding: rem(28);
+    }
+
+    @include mobile {
+      padding: rem(20);
+    }
+}

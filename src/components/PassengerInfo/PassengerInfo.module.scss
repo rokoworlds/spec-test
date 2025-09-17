@@ -1,0 +1,11 @@
+@use '../../styles/helpers/index' as *;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+
+    @include mobile {
+        gap: rem(16);
+    }
+}

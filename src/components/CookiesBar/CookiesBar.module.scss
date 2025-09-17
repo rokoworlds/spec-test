@@ -1,0 +1,41 @@
+@use '../../styles/helpers/index' as *;
+
+.container {
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(16);
+    padding: rem(24) rem(17.5);
+
+    @include mobile {
+        padding: rem(20) rem(12);
+        
+
+    }
+}
+
+.text {
+
+    @include fluid-text(14, 13);
+    font-weight: 400;
+}
+
+.btn {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-family: var(--font-family-base);
+    font-size: rem(14);
+    line-height: 130%;
+    font-weight: 700;
+    padding: rem(7) rem(44);
+
+    @include mobile {
+        padding: rem(7) rem(28);
+    } 
+}
+
+.link {
+    text-decoration: none;
+    color: var(--color-green);
+}

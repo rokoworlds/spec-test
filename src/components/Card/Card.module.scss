@@ -1,0 +1,33 @@
+@use '../../styles/helpers/index' as *;
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: rem(633);
+  margin: auto;
+  margin-top: rem(30);
+
+  @include mobile {
+    align-items: stretch;
+    max-width: 100%;
+    margin-top: auto;
+  }
+}
+
+.passenger {
+  flex-shrink: 0;
+}
+
+.result {
+  position: relative;
+  z-index: 2;
+
+  @include mobile {
+    flex: 1;
+    // margin-top: -85px;
+    transform: translateY(-85px);
+  }
+}
+

@@ -3,6 +3,7 @@ import { Button } from '../Button/Button';
 import control from '../../assets/images/control.png'
 import { StampCard } from '../StampCard/StampCard';
 import { useCharacter } from '../../context/CharacterContext';
+import { TypewriterText } from '../TypewriterText/TypewriterText';
 
 export const ResultsCard = () => {
 
@@ -15,17 +16,19 @@ export const ResultsCard = () => {
             <h2 className={styles.title}>
               { 
                 decision === 'negative'
-                ? 'Скандал!'
-                : 'Успех!'
+                ? <TypewriterText text='Скандал!' delay={1.8} />
+                : <TypewriterText text='Успех!' delay={1.8} />
               }
             </h2>
-            <p>
+            <span>
               { 
                 decision === 'negative'
-                ? character.outcomes.failure
-                : character.outcomes.success
+                ? (
+                  <TypewriterText text={character.outcomes.failure} delay={1.9} />
+                  )
+                : <TypewriterText text={character.outcomes.success} delay={1.9} />
               }
-            </p>
+            </span>
         </div>
         <div className={styles.actions}>
             <Button 

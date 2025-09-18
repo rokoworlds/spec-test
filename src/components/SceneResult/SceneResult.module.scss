@@ -49,24 +49,53 @@
     }
 }
 
-.cheecks {
-    width: 45%;
+.heart1 {
+    width: 10%;
     position: absolute;
-    bottom: 52%;
-    left: 20%;
-    rotate: -15deg;
+    bottom: 55%;
+    left: 12%;
+    rotate: -20deg;
     z-index: 15;
 
-    @include laptop {
-        width: 40%;
-        bottom: 47%;
-        left: 20%;
-    }
 
     @include mobile {
-        width: 20%;
-        bottom: 30%;
-        left: 41%;
+        width: 4%;
+        bottom: 35%;
+        left: 30%;
+    }
+}
+
+.heart2 {
+    width: 15%;
+    position: absolute;
+    bottom: 70%;
+    left: 65%;
+    z-index: 15;
+    rotate: 25deg;
+
+
+    @include mobile {
+        width: 10%;
+        bottom: 50%;
+        left: 60%;
+        rotate: 20deg;
+    }
+}
+
+.heart3 {
+    width: 11%;
+    position: absolute;
+    bottom: 76%;
+    left: 27%;
+    z-index: 15;
+    rotate: 10deg;
+
+
+    @include mobile {
+        width: 6%;
+        bottom: 50%;
+        left: 35%;
+        rotate: -20deg;
     }
 }
 

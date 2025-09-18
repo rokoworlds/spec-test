@@ -1,12 +1,11 @@
 import styles from './SceneResult.module.scss';
 
 import passangerOk from '../../assets/images/passanger-ok.png'
-// import passangerNo from '../../assets/images/passanger-no.png'
 import msgOk from '../../assets/images/msg1.1-ok.png'
 import msgOkMobile from '../../assets/images/msg-mob-ok.png'
 import msgNo from '../../assets/images/msg1.1-no.png'
 import msgNoMobile from '../../assets/images/msg-mob-no.png'
-import cheecks from '../../assets/images/cheecks.png'
+import heart1 from '../../assets/images/hand-drawn-heart-1.png'
 import angry from '../../assets/images/angry.png'
 
 import { motion, useMotionValue, useTransform } from "motion/react";
@@ -33,8 +32,14 @@ export const SceneResult = ({decision} : SceneResultProps) => {
   const msgX = useTransform(x, [0, 1], ["-3%", "3%"]);
   const msgY = useTransform(y, [0, 1], ["5%", "-5%"]);
 
-  const cheecksX = useTransform(x, [0, 1], ["-2%", "2%"]);
-  const cheecksY = useTransform(y, [0, 1], ["-5%", "5%"]);
+  const heart1X = useTransform(x, [0, 1], ["-2%", "2%"]);
+  const heart1Y = useTransform(y, [0, 1], ["-5%", "5%"]);
+
+  const heart2X = useTransform(x, [0, 1], ["-2%", "2%"]);
+  const heart2Y = useTransform(y, [0, 1], ["-5%", "5%"]);
+
+  const heart3X = useTransform(x, [0, 1], ["-2%", "2%"]);
+  const heart3Y = useTransform(y, [0, 1], ["-5%", "5%"]);
   
   const angryX = useTransform(x, [0, 1], ["-4%", "2%"]);
   const angryY = useTransform(x, [0, 1], ["2%", "-4%"]);
@@ -92,13 +97,39 @@ export const SceneResult = ({decision} : SceneResultProps) => {
         {
           decision === 'positive' && 
           <motion.img 
-            className={styles.cheecks} 
-            src={cheecks} 
+            className={styles.heart1} 
+            src={heart1} 
             alt="" 
-            style={{ x: cheecksX, y: cheecksY }}
+            style={{ x: heart1X, y: heart1Y }}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4 }}
+          /> 
+        }
+
+        {
+          decision === 'positive' && 
+          <motion.img 
+            className={styles.heart2} 
+            src={heart1} 
+            alt="" 
+            style={{ x: heart2X, y: heart2Y }}
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5 }}
+          /> 
+        }
+
+        {
+          decision === 'positive' && 
+          <motion.img 
+            className={styles.heart3} 
+            src={heart1} 
+            alt="" 
+            style={{ x: heart3X, y: heart3Y }}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.6 }}
           /> 
         }
 

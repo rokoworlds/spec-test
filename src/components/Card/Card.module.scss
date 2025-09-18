@@ -30,3 +30,16 @@
   }
 }
 
+.stamp {
+  width: 15%;
+  position: absolute;
+  left: 77%;
+  bottom: 48%;
+  rotate: -20deg;
+
+  @include mobile {
+    width: 40%;
+    left: 54%;
+    bottom: 54%
+  }
+}
